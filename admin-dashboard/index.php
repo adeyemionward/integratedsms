@@ -30,11 +30,11 @@
 			<a href="#" class="logo" style="background-color: #33a562;">IntegratedSMS</a>
 			<button type="button" class="button-close fa fa-times js__menu_close"></button>
 		</header>
-		<!-- /.header -->
+		<!-- header -->
 		<div class="content">
 
 			<div class="navigation">
-				<!-- /.title -->
+				<!-- title -->
 				<ul class="menu js__accordion">
 					<li class="current">
 						<a class="waves-effect bg-success" href="index-2.html"><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
@@ -62,19 +62,14 @@
 					</li>
 				</ul>
 			</div>
-			<!-- /.navigation -->
 		</div>
-		<!-- /.content -->
 	</div>
-	<!-- /.main-menu -->
 
 	<div class="fixed-navbar bg-success">
 		<div class="pull-left">
 			<button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
 			<h1 class="page-title">Home</h1>
-			<!-- /.page-title -->
 		</div>
-		<!-- /.pull-left -->
 		<div class="pull-right">
 			<a href="#" style="color: #fff;">School Admin</a>
 			<div class="ico-item">
@@ -82,50 +77,77 @@
 				<ul class="sub-ico-item">
 					<li><a class="js__logout" href="#">Log Out</a></li>
 				</ul>
-				<!-- /.sub-ico-item -->
 			</div>
 		</div>
-		<!-- /.pull-right -->
 	</div>
-	<!-- /.fixed-navbar -->
+	<!-- start of result view -->
 	<div id="wrapper">
 		<div class="main-content">
+			<!-- List of students -->
 			<div class="row small-spacing">
-			<div class="col-xs-12">
-				<div class="box-content table-responsive">
-					<h4 class="box-title">Default</h4>
-					<!-- /.box-title -->
-					<!-- /.dropdown js__dropdown -->
-					<table id="example" class="table  tables-responsive table-striped table-bordered display" style="width:100%; ">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Office</th>
-								<th>Age</th>
-								<th>Start date</th>
-								<th>Salary</th>
-							</tr>
-						</thead>
-						
-						<tbody>
-							<tr>
-								<td>Tiger Nixon</td>
-								<td>System Architect</td>
-								<td>Edinburgh</td>
-								<td>61</td>
-								<td>2011/04/25</td>
-								<td>$320,800</td>
-							</tr>
-							
-						</tbody>
-					</table>
+				<div class="col-xs-12">
+					<div class="box-content table-responsive">
+						<h4 class="box-title">List Of Students</h4>
+						<table id="example" class="table table-striped table-bordered display" style="width:100%; ">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Position</th>
+									<th>Office</th>
+									<th>Age</th>
+									<th>Start date</th>
+									<th>Salary</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>Tiger Nixon</td>
+									<td>System Architect</td>
+									<td>Edinburgh</td>
+									<td>61</td>
+									<td>2011/04/25</td>
+									<td>$320,800</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
 				</div>
-				<!-- /.box-content -->
 			</div>
-			
-		</div>
-			<!-- /.row -->
+			<!-- List of courses -->
+			<div class="row small-spacing">
+				<div class="col-xs-12">
+					<div class="box-content table-responsive">
+						<h4 class="box-title">List Of Courses</h4>
+						<table id="example" class="table table-striped table-bordered display" style="width:100%; ">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Position</th>
+									<th>Office</th>
+									<th>Age</th>
+									<th>Start date</th>
+									<th>Salary</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>Tiger Nixon</td>
+									<td>System Architect</td>
+									<td>Edinburgh</td>
+									<td>61</td>
+									<td>2011/04/25</td>
+									<td>$320,800</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- footer -->
 			<footer class="footer">
 				<ul class="list-inline">
 					<li>2016 © NinjaAdmin.</li>
@@ -135,7 +157,6 @@
 				</ul>
 			</footer>
 		</div>
-		<!-- /.main-content -->
 	</div>
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="assets/scripts/jquery.min.js"></script>
@@ -152,5 +173,4 @@
 
 	<script src="assets/scripts/main.min.js"></script>
 </body>
-
 </html>
