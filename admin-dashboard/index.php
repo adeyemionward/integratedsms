@@ -1,3 +1,7 @@
+<?php session_start(); 
+	if (isset($_SESSION["email"])) {
+		
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +13,10 @@
 	<meta name="author" content="">
 
 	<title>Admin Dashboard - Integrated SMS</title>
-
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="assets/styles/style.min.css">
-
 	<!-- Themify Icon -->
 	<link rel="stylesheet" href="assets/fonts/themify-icons/themify-icons.css">
-
 	<!-- Sweet Alert -->
 	<link rel="stylesheet" href="assets/plugin/sweet-alert/sweetalert.css">
 	<!-- Data Tables -->
@@ -68,10 +69,10 @@
 	<div class="fixed-navbar bg-success">
 		<div class="pull-left">
 			<button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
-			<h1 class="page-title">Home</h1>
+			<h1 class="page-title">Dashboard</h1>
 		</div>
 		<div class="pull-right">
-			<a href="#" style="color: #fff;">School Admin</a>
+			<a href="#" style="color: #fff;"><?php echo $_SESSION["school_name"] ?></a>
 			<div class="ico-item">
 				<i class="ti-user"></i>
 				<ul class="sub-ico-item">
@@ -99,7 +100,6 @@
 									<th>Salary</th>
 								</tr>
 							</thead>
-
 							<tbody>
 								<tr>
 									<td>Tiger Nixon</td>
@@ -109,7 +109,6 @@
 									<td>2011/04/25</td>
 									<td>$320,800</td>
 								</tr>
-
 							</tbody>
 						</table>
 					</div>
@@ -174,3 +173,7 @@
 	<script src="assets/scripts/main.min.js"></script>
 </body>
 </html>
+<?php }else{
+echo "<script>window.location.href='/'</script>";
+}
+?>
