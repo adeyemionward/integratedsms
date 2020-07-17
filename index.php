@@ -2,7 +2,7 @@
 <html>
 <?php include_once("includes/head.php"); ?> 
 <body style=" background-image: url(images/bg1.jpg);background-repeat: no-repeat; background-size:cover; background-position: center;background-attachment: fixed;">
-<!-- body introduction -->
+<!-- body/hero introduction -->
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-12 hero-text">

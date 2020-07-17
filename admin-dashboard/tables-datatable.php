@@ -893,7 +893,7 @@
 						<!-- /.sub-menu -->
 					</div>
 					<!-- /.dropdown js__dropdown -->
-					<table id="example-scroll-y" class="table table-responsive table-striped table-bordered display" style="width:100%">
+					<table id="example-scroll-y" class="table table-striped table-bordered display" style="width:100%">
 						<thead>
 							<tr>
 								<th>Name</th>

@@ -6,7 +6,7 @@
 <!-- school registration -->
 <div class="container">
   <div class="col-lg-6 form-container offset-lg-3">
- 
+    
   <form method="POST" id="register_school">
      <h2 class="text-center" style="padding-top: 15px;">Login</h2>
     
