@@ -22,7 +22,7 @@ if (isset($_SESSION["email"])) {
                     <!-- title -->
                     <ul class="menu js__accordion">
                         <li>
-                            <a class="waves-effect bg-success" href=""><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
+                            <a class="waves-effect bg-success" href="admin-dashboard"><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
                         </li>
                     </ul>
                     <!-- /.menu js__accordion -->
@@ -51,14 +51,14 @@ if (isset($_SESSION["email"])) {
         <div class="fixed-navbar bg-success">
             <div class="pull-left">
                 <button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
-                <h1 class="page-title">Dashboard</h1>
+                <h1 class="page-title">Register Course</h1>
             </div>
             <div class="pull-right">
                 <a href="#" style="color: #fff;"><?php echo $_SESSION["school_name"] ?></a>
                 <div class="ico-item">
                     <i class="ti-user"></i>
                     <ul class="sub-ico-item">
-                        <li><a class="js__logout" href="#">Log Out</a></li>
+                        <li><a class="js__logout" href="../logout">Log Out</a></li>
                     </ul>
                 </div>
             </div>

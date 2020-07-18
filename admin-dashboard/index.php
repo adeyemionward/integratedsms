@@ -25,7 +25,7 @@ if (isset($_SESSION["email"])) {
 					<!-- title -->
 					<ul class="menu js__accordion">
 						<li class="current">
-							<a class="waves-effect bg-success" href="index-2.html"><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
+							<a class="waves-effect bg-success" href="admin-dashboard"><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
 						</li>
 					</ul>
 					<!-- /.menu js__accordion -->
@@ -61,7 +61,7 @@ if (isset($_SESSION["email"])) {
 				<div class="ico-item">
 					<i class="ti-user"></i>
 					<ul class="sub-ico-item">
-						<li><a class="js__logout" href="#">Log Out</a></li>
+						<li><a class="js__dlogout" href="../logout">Log Out</a></li>
 					</ul>
 				</div>
 			</div>
@@ -87,7 +87,6 @@ if (isset($_SESSION["email"])) {
 								<tbody>
 									<?php foreach ($fetch_all_cours as $key => $course) { ?>
 										<tr>
-
 											<td><?php echo $course["course_title"] ?></td>
 											<td><?php echo $course["course_code"] ?></td>
 											<td><?php echo $course["course_duration"] ?></td>
