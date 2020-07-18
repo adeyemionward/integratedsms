@@ -15,7 +15,6 @@ if (isset($_SESSION["email"])) {
     <title>Register Course - Integrated SMS</title>
     <!-- head file contains links to css files -->
     <?php include_once("includes/head.php"); ?>
-    <?php //include_once("register-course-handler.php"); ?>
 
     <body>
         <div class="main-menu">
@@ -25,7 +24,6 @@ if (isset($_SESSION["email"])) {
             </header>
             <!-- header -->
             <div class="content">
-
                 <div class="navigation">
                     <!-- title -->
                     <ul class="menu js__accordion">
@@ -33,7 +31,6 @@ if (isset($_SESSION["email"])) {
                             <a class="waves-effect" href="admin-dashboard"><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
                         </li>
                     </ul>
-                    <!-- /.menu js__accordion -->
                     <!-- courses accordion -->
                     <ul class="menu js__accordion">
                         <li>
@@ -58,7 +55,7 @@ if (isset($_SESSION["email"])) {
 
         <div class="fixed-navbar bg-success">
             <div class="pull-left">
-                <button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
+                <button type="button" class="menu-mobile-button bg-success glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
                 <h1 class="page-title">Register Students</h1>
             </div>
             <div class="pull-right">
@@ -79,10 +76,9 @@ if (isset($_SESSION["email"])) {
                         <div class="col-lg-6 col-xs-12 col-lg-offset-3">
                             <div class="box-content card white" style="border-radius: 10px;">
                                 <h1 class="box-title">Register Student</h1>
-                                <!-- /.box-title -->
                                 <div class="card-content">
                                     <form method="POST" id="register_student">
-                                        <input type="hidden" class="form-control" value="<?php echo $_SESSION["school_name"] ?>" name="school_name" required placeholder="Enter course title">
+                                        <input type="hidden" class="form-control" value="<?php echo $fetch_all_data->school_name ?>" name="school_name" required placeholder="Enter course title">
                                         <div class="form-group">
                                             <label for="studentName">Student Name<span class="required">*</span></label>
                                             <input type="text" class="form-control" name="student_name" required placeholder="Enter student name">
@@ -118,14 +114,12 @@ if (isset($_SESSION["email"])) {
                                         <button type="submit" name="student_reg" class="btn btn-success btn-sm waves-effect waves-light">Register student</button>
                                     </form>
                                 </div>
-                                <!-- /.card-content -->
                             </div>
-                            <!-- /.box-content -->
                         </div>
                     </div>
                 </div>
 
-                <!-- Placed at the end of the document so the pages load faster -->
+                <!-- js placed at the end of the document so the pages load faster -->
                 <?php include_once("includes/footer.php"); ?>
             </div>
         </div>

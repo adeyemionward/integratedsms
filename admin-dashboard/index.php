@@ -59,7 +59,7 @@ if (isset($_SESSION["email"])) {
 
 		<div class="fixed-navbar bg-success">
 			<div class="pull-left">
-				<button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
+				<button type="button" class="menu-mobile-button bg-success glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
 				<h1 class="page-title">Dashboard</h1>
 			</div>
 			<div class="pull-right">
