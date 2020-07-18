@@ -93,7 +93,7 @@ if (isset($_SESSION["email"])) {
 
                                         <div class="form-group">
                                             <label for="lecturerName">Select Course<span class="required">*</span></label>
-                                            <select class="form-control" required>
+                                            <select class="form-control" required name="course">
                                                 <option value="">Select course</option>
                                                 <?php if (mysqli_num_rows($fetch_all_cours) < 1) {?>
                                                    <option value="">Please register courses</option>
@@ -107,7 +107,7 @@ if (isset($_SESSION["email"])) {
                                         </div>
                                         <div class="form-group">
                                             <label for="sessionYear">Session(YEAR)<span class="required">*</span></label>
-                                            <textarea class="form-control" name="session" required placeholder="Enter session year"></textarea>
+                                            <input type="text" class="form-control" name="session" required placeholder="Enter session year"></textarea>
                                         </div>
                                         <div id="message" class="form-group col-lg-10 offset-lg-1"></div>
                                         <button type="submit" name="student_reg" class="btn btn-success btn-sm waves-effect waves-light">Register student</button>
