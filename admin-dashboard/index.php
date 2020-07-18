@@ -2,8 +2,14 @@
 if (isset($_SESSION["email"])) {
 	include_once("../Model/FetchData.php");
 	$fetch_all_data = new FetchData();
-	$fetch_all_cours = $fetch_all_data->fetch_courses($_SESSION["school_name"]);
-	$fetch_all_students = $fetch_all_data->fetch_students($_SESSION["school_name"]);
+
+	// school data
+	$fetch_all_data->fetch_school_data($_SESSION["email"]);
+	$fetch_all_data->school_name;
+	//
+
+	$fetch_all_cours = $fetch_all_data->fetch_courses($fetch_all_data->school_name);
+	$fetch_all_students = $fetch_all_data->fetch_students($fetch_all_data->school_name);
 
 ?>
 	<!DOCTYPE html>
@@ -57,11 +63,11 @@ if (isset($_SESSION["email"])) {
 				<h1 class="page-title">Dashboard</h1>
 			</div>
 			<div class="pull-right">
-				<a href="#" style="color: #fff;"><?php echo $_SESSION["school_name"] ?></a>
+				<a href="#" style="color: #fff;"><?php echo $fetch_all_data->school_name ?></a>
 				<div class="ico-item">
 					<i class="ti-user"></i>
 					<ul class="sub-ico-item">
-						<li><a class="js__dlogout" href="../logout">Log Out</a></li>
+						<li><a href="../logout">Log Out</a></li>
 					</ul>
 				</div>
 			</div>

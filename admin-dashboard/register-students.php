@@ -1,8 +1,13 @@
 <?php session_start();
 if (isset($_SESSION["email"])) {
     include_once("../Model/FetchData.php");
-	$fetch_all_data = new FetchData();
-	$fetch_all_cours = $fetch_all_data->fetch_courses($_SESSION["school_name"]);
+    $fetch_all_data = new FetchData();
+    // school data
+	$fetch_all_data->fetch_school_data($_SESSION["email"]);
+	$fetch_all_data->school_name;
+	//
+	
+	$fetch_all_cours = $fetch_all_data->fetch_courses($fetch_all_data->school_name);
 
 ?>
     <!DOCTYPE html>
@@ -25,7 +30,7 @@ if (isset($_SESSION["email"])) {
                     <!-- title -->
                     <ul class="menu js__accordion">
                         <li>
-                            <a class="waves-effect bg-success" href="admin-dashboard"><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
+                            <a class="waves-effect" href="admin-dashboard"><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
                         </li>
                     </ul>
                     <!-- /.menu js__accordion -->
@@ -41,7 +46,7 @@ if (isset($_SESSION["email"])) {
                     <!-- student accordion -->
                     <ul class="menu js__accordion">
                         <li class="current">
-                            <a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fa fa-graduation-cap"></i><span>Students</span><span class="menu-arrow fa fa-angle-down"></span></a>
+                            <a class="waves-effect bg-success parent-item js__control" href="#"><i class="menu-icon fa fa-graduation-cap"></i><span>Students</span><span class="menu-arrow fa fa-angle-down"></span></a>
                             <ul class="sub-menu js__content">
                                 <li><a href="register-students">Register Students</a></li>
                             </ul>
@@ -57,11 +62,11 @@ if (isset($_SESSION["email"])) {
                 <h1 class="page-title">Register Students</h1>
             </div>
             <div class="pull-right">
-                <a href="#" style="color: #fff;"><?php echo $_SESSION["school_name"] ?></a>
+                <a href="#" style="color: #fff;"><?php echo $fetch_all_data->school_name ?></a>
                 <div class="ico-item">
                     <i class="ti-user"></i>
                     <ul class="sub-ico-item">
-                        <li><a class="js__logout" href="../logout">Log Out</a></li>
+                        <li><a href="../logout">Log Out</a></li>
                     </ul>
                 </div>
             </div>

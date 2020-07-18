@@ -1,5 +1,11 @@
 <?php session_start();
 if (isset($_SESSION["email"])) {
+    include_once("../Model/FetchData.php");
+    $fetch_all_data = new FetchData();
+    // school data
+    $fetch_all_data->fetch_school_data($_SESSION["email"]);
+    $fetch_all_data->school_name;
+	//
 
 ?>
     <!DOCTYPE html>
@@ -7,7 +13,7 @@ if (isset($_SESSION["email"])) {
     <title>Register Course - Integrated SMS</title>
     <!-- head file contains links to css files -->
     <?php include_once("includes/head.php"); ?>
-    <?php include_once("register-course-handler.php"); ?>
+    <?php //include_once("register-course-handler.php"); ?>
 
     <body>
         <div class="main-menu">
@@ -17,7 +23,6 @@ if (isset($_SESSION["email"])) {
             </header>
             <!-- header -->
             <div class="content">
-
                 <div class="navigation">
                     <!-- title -->
                     <ul class="menu js__accordion">
@@ -54,11 +59,11 @@ if (isset($_SESSION["email"])) {
                 <h1 class="page-title">Register Course</h1>
             </div>
             <div class="pull-right">
-                <a href="#" style="color: #fff;"><?php echo $_SESSION["school_name"] ?></a>
+                <a href="#" style="color: #fff;"><?php echo $fetch_all_data->school_name ?></a>
                 <div class="ico-item">
                     <i class="ti-user"></i>
                     <ul class="sub-ico-item">
-                        <li><a class="js__logout" href="../logout">Log Out</a></li>
+                        <li><a href="../logout">Log Out</a></li>
                     </ul>
                 </div>
             </div>
