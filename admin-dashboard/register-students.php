@@ -1,8 +1,8 @@
 <?php session_start();
 if (isset($_SESSION["email"])) {
-    include_once("../Model/FetchCourses.php");
-	$fetch_all_courses = new FetchCourses();
-	$fetch_all_cours = $fetch_all_courses->fetch_courses($_SESSION["school_name"]);
+    include_once("../Model/FetchData.php");
+	$fetch_all_data = new FetchData();
+	$fetch_all_cours = $fetch_all_data->fetch_courses($_SESSION["school_name"]);
 
 ?>
     <!DOCTYPE html>

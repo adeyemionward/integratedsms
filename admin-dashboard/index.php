@@ -1,8 +1,9 @@
 <?php session_start();
 if (isset($_SESSION["email"])) {
-	include_once("../Model/FetchCourses.php");
-	$fetch_all_courses = new FetchCourses();
-	$fetch_all_cours = $fetch_all_courses->fetch_courses($_SESSION["school_name"]);
+	include_once("../Model/FetchData.php");
+	$fetch_all_data = new FetchData();
+	$fetch_all_cours = $fetch_all_data->fetch_courses($_SESSION["school_name"]);
+	$fetch_all_students = $fetch_all_data->fetch_students($_SESSION["school_name"]);
 
 ?>
 	<!DOCTYPE html>
@@ -103,23 +104,25 @@ if (isset($_SESSION["email"])) {
 				<div class="row small-spacing">
 					<div class="col-xs-12">
 						<div class="box-content table-responsive">
-							<h4 class="box-title">List Of Courses</h4>
+							<h4 class="box-title">List Of Students</h4>
 							<table id="example" class="table table-striped table-bordered display" style="width:100%; ">
 								<thead>
 									<tr>
-										<th>Course Title</th>
-										<th>Course Code</th>
-										<th>Course Duration</th>
-										<th>Course Description</th>
+										<th>Student Name</th>
+										<th>Reg No.</th>
+										<th>Admission Date</th>
+										<th>Course</th>
+										<th>Session</th>
 									</tr>
 								</thead>
 								<tbody>
-									<?php foreach ($fetch_all_cours as $key => $course) { ?>
+									<?php foreach ($fetch_all_students as $key => $student) { ?>
 										<tr>
-											<td><?php echo $course["school"] ?></td>
-											<td><?php echo $course["course_title"] ?></td>
-											<td><?php echo $course["course_code"] ?></td>
-											<td><?php echo $course["course_desc"] ?></td>
+											<td><?php echo $student["student_name"] ?></td>
+											<td><?php echo $student["reg_no"] ?></td>
+											<td><?php echo $student["admission_date"] ?></td>
+											<td><?php echo $student["course"] ?></td>
+											<td><?php echo $student["session"] ?></td>
 										</tr>
 									<?php } ?>
 								</tbody>
