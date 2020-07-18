@@ -1,8 +1,6 @@
 <?php
 class DataBase{
-	
 	public $conn;
-
 	    public function __construct(){
 	       	//$this->name = $name;
 	       		if ($this->connect("localhost","root","","integratedsms")) {
