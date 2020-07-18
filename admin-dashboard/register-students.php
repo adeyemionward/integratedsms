@@ -19,7 +19,7 @@ if (isset($_SESSION["email"])) {
     <body>
         <div class="main-menu">
             <header class="header">
-                <a href="#" class="logo" style="background-color: #33a562;">IntegratedSMS</a>
+                <a href="/" class="logo" style="background-color: #33a562;">IntegratedSMS</a>
                 <button type="button" class="button-close fa fa-times js__menu_close"></button>
             </header>
             <!-- header -->
