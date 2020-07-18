@@ -2,6 +2,7 @@
 <?php session_start();?>
 <!DOCTYPE html>
 <html>
+  <title>Home | integratedsms</title>
 <?php include_once("includes/head.php"); ?>
 
 <body style=" background-image: url(images/bg1.jpg);background-repeat: no-repeat; background-size:cover; background-position: center;background-attachment: fixed;">
