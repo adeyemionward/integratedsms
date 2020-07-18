@@ -8,11 +8,10 @@ class RegisterSchool extends DataBase{
 		if($result = mysqli_query($this->conn, $query)){
 			$_SESSION['school_name']=$name;
 			$_SESSION['email']=$email;
-			$_SESSION['password']=$password;
 		 	return true;
 
 		}else{
-		 	mysqli_error();
+		 	return false;
 		}
 	}
 

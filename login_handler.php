@@ -6,7 +6,7 @@ $school_login = new LoginSchool();
 if (!empty($_POST["email"])) {
     $email = filter_input(INPUT_POST, 'email');
     $password = filter_input(INPUT_POST, 'password');
-        if ($school_login->login_school( $email, md5($password))) {
+        if ($school_login->login_school( $email, $password)) {
             echo 1;
         }
 }
