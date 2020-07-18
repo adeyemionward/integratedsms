@@ -8,7 +8,7 @@
 
 <div class="topnav" id="myTopnav" style="background-color: #fff">
   
-  <a href="/" class="active">IA2ZTECH SMS</a>
+  <a href="/" class="active">INTEGRATED SMS</a>
   
   <a href="register"><button class="btn btn-success">Register School</button></a>
   <a href="login">Login</a>
